@@ -1,0 +1,11 @@
+select 
+empno,
+ename,
+job,
+mgr,
+try_to_date(hiredate,'mm/dd/yyyy'),
+sal,
+comm,
+dept 
+from 
+DEV_DB.RAW.EMP_RAW
