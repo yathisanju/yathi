@@ -1,9 +1,11 @@
 select 
 empno,
-ename,
+lower(ename) as Emp_name,
 job,
 mgr,
-try_to_date(hiredate,'mm/dd/yyyy'),
+hiredate,
+coalesce(try_to_date('dd-mm-yyyy'),
+try_to_date('mm/dd/yyyy')) as hiredate2,
 sal,
 comm,
 dept 
